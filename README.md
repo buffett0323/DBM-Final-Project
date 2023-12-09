@@ -5,7 +5,7 @@ https://drive.google.com/file/d/1N5C323bKz56iP8pS7C8rVRi_luCACjhG/view?usp=share
 
 2. After successfully loading the file, REMEMBER to change the table 'user' to 'users'!!! Very IMPORTANT!
 
-3. Remember to change the password inside db_password.txt file to your password.
+3. Remember to create a new file called "db_password.txt" and place your password in it.
 
 # Reminder
 I currently ignore the graphic design. I will do that later.
