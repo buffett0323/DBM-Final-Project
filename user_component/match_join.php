@@ -26,6 +26,28 @@
 ?>
 
 
+<script>
+    function updateDatabase(matchid, position) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'match_update.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (this.status === 200) {
+                console.log(this.responseText);
+                /*
+                // Additional client-side actions after the update
+                var messageElement = document.getElementById('message-' + rowId);
+                messageElement.textContent = 'Successfully joined';
+                messageElement.style.color = 'green'; 
+                */
+            }
+        };
+        xhr.send('matchid=' + matchid + '&position=' + position);
+    }
+</script>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +58,7 @@
 <body>
     <div class="container">
         <h1>Join Match</h1>
-        <form action="match_join.php" method="post">
+        <form action="match_update.php" method="post">
         <?php
             // Get the matchid sent
             if (isset($_GET['matchid'])) {
@@ -60,12 +82,15 @@
 
                         foreach ($results as $row) {
                             echo "<tr>";
-                            echo "<td>" . $row['matchid'] . "</td>";
-                            echo "<td>" . $row['position'] . "</td>";
-                            
-                            // After clicking, removing the row in positionshortage and minus 1 in the database.
-                            // echo "<td><button class='signup-button' onclick='callSignupFunction()'>Sign up</button></td>";
-                            echo "<td>" . "<input type='submit' name='button' value='V'/>" . "</td>";
+                                echo "<td>" . $row['matchid'] . "</td>";
+                                echo "<td>" . $row['position'] . "</td>";
+                                
+                                // After clicking, removing the row in positionshortage and minus 1 in the database.
+                                echo "<td>";
+                                    // echo "<form action='match_update.php' method='post'>";
+                                    echo "<button onclick='updateDatabase(\"" . $row['matchid'] . "\", \"" . $row['position'] . "\")'>JOIN</button>";
+                                    // echo "</form>";
+                                echo "</td>";
                             echo "</tr>";
                         }
                         echo "</table>";
