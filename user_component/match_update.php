@@ -37,10 +37,9 @@
         <h1>Updating Match</h1>
         
         <?php
-            
             $matchid = $_POST['matchid'];
             $position = $_POST['position'];
-    
+
             // Delete query
             $sql = "
                 DELETE FROM positionshortage ps
@@ -74,8 +73,9 @@
             } catch (PDOException $e) {
                 echo "Error executing query: " . $e->getMessage();
             }
-            echo "<h2>Delete & Update Database successfully<h2><br>";
-        
+            
+            echo "<p>Join Match successfully!!<p><br>";
+                
         ?>
 
     <button class="button previous" onclick="history.back();">Previous Page</button>
@@ -83,7 +83,6 @@
     </div>
 </body>
 </html>
-
 
 
 

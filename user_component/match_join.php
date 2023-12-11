@@ -89,6 +89,7 @@
                                 echo "<td>";
                                     // echo "<form action='match_update.php' method='post'>";
                                     echo "<button onclick='updateDatabase(\"" . $row['matchid'] . "\", \"" . $row['position'] . "\")'>JOIN</button>";
+                                    // echo "<a href='match_update.php?matchid=" . $row['matchid'] . "&position=" . urlencode($row['position']) . "'><button>Join Match</button></a>";
                                     // echo "</form>";
                                 echo "</td>";
                             echo "</tr>";

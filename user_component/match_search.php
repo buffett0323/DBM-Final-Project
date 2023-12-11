@@ -117,10 +117,7 @@
 
                 } catch (PDOException $e) {
                     echo "Error executing query: " . $e->getMessage();
-                }
-                
-
-
+                }    
             }
         ?>
     </div>
