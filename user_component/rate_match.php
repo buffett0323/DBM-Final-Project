@@ -35,36 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['matchid'])) {
 <html>
 <head>
     <title>Rate Match</title>
-    <style>
-        .container {
-            width: 80%;
-            margin: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:nth-child(even) {background-color: #f2f2f2;}
-        button {
-            padding: 5px 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="user.css">
 </head>
 <body>
     <div class="container">

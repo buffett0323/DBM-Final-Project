@@ -66,6 +66,7 @@
             color: gold;
         }
     </style>
+    <link rel="stylesheet" href="user.css">
 </head>
 <body>
     <div class="container">
@@ -87,8 +88,7 @@
                 <input type="submit" name="submitReview" value="提交評價">
             </form>
         <?php endif; ?>
-    </div>
-    <div class="container">
+        
         <button class="button previous" onclick="history.back();">Previous Page</button>
         <button class="button main" onclick="window.location.href='../index.php';">Main Page</button><br>
     </div>
