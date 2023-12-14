@@ -30,15 +30,18 @@
 
     // Define url
     $selectedCourtUrl = "";
+    $selectedName = "";
     if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
         $selectedCourtId = $_POST['courtId'];
         foreach ($courts as $court) {
             if ($court['courtid'] == $selectedCourtId) {
                 $selectedCourtUrl = $court['url'];
+                $selectedName = $court['courtname'];
                 break;
             }
         }
     }
+    $imagePath = '../pictures/' . $selectedName . '.jpeg';
 ?>
 
 
@@ -79,7 +82,7 @@
         
         <?php if ($selectedCourtUrl): ?>
             <div>
-                <img src="<?php echo $selectedCourtUrl; ?>" alt="Google Drive Image" style="max-width: 100%; height: auto;">
+                <img src="<?php echo htmlspecialchars($imagePath); ?>" style="max-width: 100%; height: auto;">
             </div>
         <?php endif; ?>
 
@@ -87,5 +90,6 @@
         <button class="button main" onclick="window.location.href='../index.php';">Main Page</button>
 
     </div>
+    
 </body>
 </html>
