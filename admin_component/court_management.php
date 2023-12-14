@@ -2,7 +2,7 @@
 // Database connection
 session_start();
 
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['admin_name'])) {
     header('Location: login.php');
     exit;
 }
