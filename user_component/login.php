@@ -48,9 +48,11 @@
             try {
                 $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
                 $stmt->execute(['username' => $username, 'password' => $password]);
-                
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
                 if ($stmt->rowCount() > 0) {
                     $_SESSION['username'] = $username;
+                    $_SESSION['login_userid'] = $result[0]['userid'];
                     header('Location: user.php');   // Access to user profile
                 } else {
                     echo "<h3>Invalid username or password!</h3><br>";
