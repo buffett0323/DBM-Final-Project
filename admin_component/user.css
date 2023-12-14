@@ -1,0 +1,185 @@
+/* Style forms added by Buffett  */
+/* CSS styles for the buttons */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {background-color: #f9f9f9;}
+form > div {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+select, input[type="submit"] {
+    width: 10%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input[type="submit"] {
+    background-color: #555555;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #4d73b1;
+}
+input[type="time"] {
+    width: 10%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+h2 {
+    color: #555;
+    margin-top: 0;
+    font-size: 1.5em;
+    text-align: left;
+}
+.link-container {
+    text-align: left;
+    margin-top: 30px;
+}
+.search-link {
+    display: inline-start;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #555555;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+.search-link:hover {
+    background-color: #4d73b1;
+}
+
+/* Buffett added */
+
+.button-container {
+    text-align: center; /* Center the button container */
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    display: inline-block; /* Display buttons inline */
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.previous {
+    background-color: #fca5a5; /* Light red */
+}
+
+.main {
+    background-color: #a5d8fc; /* Light blue */
+}
+
+.add_use {
+    background-color: #2f7952; /* Light green */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.user-info {
+    float: right;
+}
+
+/* Editing use pencil button */
+.pencil-button {
+    background-color: #f0c674; /* Pencil color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px #999;
+}
+
+.pencil-button:hover { background-color: #e6b450 }
+
+.pencil-button:active {
+    background-color: #e6b450;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+/* Delete use */
+.delete-button {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+.delete-button img {
+    width: 20px; /* Width of the backspace icon */
+    height: 20px; /* Height of the backspace icon */
+    margin-right: 5px; /* Space between the icon and text */
+}
