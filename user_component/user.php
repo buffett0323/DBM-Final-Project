@@ -14,15 +14,16 @@
 
 <body>
     <div class="container">
+        <h1>Welcome Hooper's User</h1>
+        <li class="admin-info">
+            <?php echo isset($_SESSION['username']) ? 'Welcome, ' . $_SESSION['username'] : 'No User Login'; ?>
+        </li>
         <div class="link-container">
-            <h1>Welcome Hooper's User</h1>
             <a href="register.php" class="search-link">使用者註冊</a>
             <a href="login.php" class="search-link">使用者登入</a>
             <a href="logout.php" class="search-link">使用者登出</a>
             <!-- <a href="register.php" class="register-button">使用者註冊</a>
             <a href="login.php" class="login-button">使用者登入</a> -->
-            <li class="user-info"><?php echo isset($_SESSION['username']) ? 'Welcome, ' . $_SESSION['username'] : 'No User Login'; ?></li>
-
         </div>
         <div class="link-container">
             <!-- <a href="register.php" class="search-link">使用者註冊</a>
