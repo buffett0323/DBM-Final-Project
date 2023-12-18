@@ -67,7 +67,9 @@
                 
                 // 生成隨機的 MatchID
                 $newMatchId = generateUniqueId($pdo);
-                
+                $pdo->beginTransaction();
+                $stmt = $pdo->prepare('LOCK TABLE match');
+                $stmt->execute();
                 // SQL command
                 $sql = "INSERT INTO MATCH (MatchID, Fee, Date, Time, HolderID, CourtID, RequiredNumberofPlayers) 
                         VALUES (:MatchID, :Fee, :Date, :Time, :HolderID, :CourtID, :RequiredNumberofPlayers)";
@@ -87,7 +89,7 @@
                     echo "Match Successfully Create";
                     echo "<table border='1'>"; // Start the table and set a border for visibility
                     echo "<tr><th colspan='2'>Match Details</th></tr>"; // Table header
-
+                    echo "Match Successfully Create";
                     // Each row in the table represents a different piece of data
                     echo "<tr><td>Match ID</td><td>" . $newMatchId . "</td></tr>";
                     echo "<tr><td>Court ID</td><td>" . $courtId . "</td></tr>";
@@ -99,10 +101,9 @@
                     echo "<tr><td>Fee(Each Person)</td><td>" . $fee . "</td></tr>";
                     echo "<tr><td>Match Holder</td><td>" . $_SESSION['username'] . "</td></tr>";
                     echo "</table>"; 
-
-
+                    $pdo->commit();
                 } catch (PDOException $e) {
-                    // 處理錯誤
+                    #$pdo->rollBack();
                     echo "Error: " . $e->getMessage();
                 }
             } else {
@@ -111,7 +112,6 @@
                 exit;
             }
         ?>
-
 
         <button class="button previous" onclick="history.back();">Previous Page</button>
         <button class="button main" onclick="window.location.href='../index.php';">Main Page</button><br>

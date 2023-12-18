@@ -24,9 +24,10 @@ session_start();
         </div>
         <!-- Wait for other pages -->
         <div class="link-container">
-            <!-- <a href="add_court.php" class="search-link">新增球場</a> -->
+            <a href="add_court.php" class="search-link">新增球場</a>
+            <a href="add_court_csv.php" class="search-link">批次新增球場</a>
             <a href="court_management.php" class="search-link">管理球場</a>
-            <!-- <a href="add_match.php" class="search-link">新增約戰</a> -->
+            <a href="add_match.php" class="search-link">新增約戰</a>
             <a href="match_management.php" class="search-link">管理約戰</a>
             <a href="user_record_search.php" class="search-link">查詢使用者活動紀錄</a>
             <a href="review_management.php" class="search-link">管理評價系統</a>
